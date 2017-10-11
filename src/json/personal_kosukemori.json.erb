@@ -1,0 +1,46 @@
+{
+    "title": "Personal rules (@kosukemori)",
+    "rules": [
+        {
+            "description": "escキーを押したときに、英数キーも送信する(vim用)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("escape", [], []) %>,
+                    "to": <%= to([["escape"], ["japanese_eisuu"]]) %>
+                }
+            ]
+        },
+        {
+            "description": "Ctrl+[を押したときに、英数キーも送信する(vim用)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("open_bracket", ["control"], []) %>,
+                    "to": <%= to([["open_bracket", ["control"]], ["japanese_eisuu"]]) %>
+                }
+            ]
+        },
+        {
+            "description": "Ctrl+jを押したときに、英数キーも送信する(vim用)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("j", ["control"], []) %>,
+                    "to": <%= to([["j", ["control"]], ["japanese_eisuu"]]) %>
+                }
+            ]
+        },
+        {
+            "description": "Ctrl+gを押したときに、英数キーも送信する(vim用)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("g", ["control"], []) %>,
+                    "to": <%= to([["g", ["control"]], ["japanese_eisuu"]]) %>
+                }
+            ]
+        }
+ 
+    ]
+}
